@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Proceso Judicial" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-06T23:12:27" hostname="DESKTOP-CKMVIA1" time="17.778">
+  <properties/>
+  <testcase name="Consultar el proceso judicial 0000000000" classname="Proceso Judicial" time="17.778"/>
+  <system-out><![CDATA[?[32m.?[0m?[32m.?[0m?[32m.?[0m]]></system-out>
+  <system-err><![CDATA[nov 06, 2019 6:12:27 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 15034
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1573081952.652][WARNING]: Timed out connecting to Chrome, retrying...
+nov 06, 2019 6:12:34 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+]]></system-err>
+</testsuite>

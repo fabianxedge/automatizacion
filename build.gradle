@@ -1,0 +1,39 @@
+repositories {
+    mavenLocal()
+    jcenter()
+}
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.0.4")
+    }
+}
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
+ext{
+    serenityVersion = '2.0.52'
+    serenityCucumberVersion = '1.0.15'
+}
+dependencies {
+
+    testImplementation "net.serenity-bdd:serenity-core:$rootProject.ext.serenityVersion"
+    testImplementation "net.serenity-bdd:serenity-junit:$rootProject.ext.serenityVersion"
+    testImplementation 'org.hamcrest:hamcrest:2.1'
+    testImplementation "net.serenity-bdd:serenity-screenplay:$rootProject.ext.serenityVersion"
+    testImplementation "net.serenity-bdd:serenity-cucumber4:$rootProject.ext.serenityCucumberVersion"
+    testImplementation "net.serenity-bdd:serenity-screenplay-webdriver:$rootProject.ext.serenityVersion"
+
+}
+gradle.startParameter.continueOnFailure = true
+
+tasks.withType(Test) {
+    maxParallelForks = Runtime.runtime.availableProcessors()
+}
+test {
+    maxParallelForks = Runtime.runtime.availableProcessors()
+}
